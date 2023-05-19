@@ -1,0 +1,2 @@
+# btcftw
+$BTC only ticker
