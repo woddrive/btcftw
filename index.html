@@ -212,9 +212,9 @@ function updateBitcoinValue(amount, currency) {
 }
 
 // Example usage: Calculate and display the value of 1.56 Bitcoin
-const bitcoinAmount = 1.56;
-const selectedCurrency = currencySelector.value;
-updateBitcoinValue(bitcoinAmount, selectedCurrency);
+//const bitcoinAmount = 1.56;
+//const selectedCurrency = currencySelector.value;
+//updateBitcoinValue(bitcoinAmount, selectedCurrency);
 
 // Update the Bitcoin value whenever the currency selection changes
 currencySelector.addEventListener('change', () => {
@@ -224,7 +224,7 @@ currencySelector.addEventListener('change', () => {
 
 // New function to calculate Bitcoin value based on the amount entered manually
 function calculateBitcoinAmountValue() {
-  const amount = 1.90; // Enter the desired Bitcoin amount here
+  const amount = 1.93; // Enter the desired Bitcoin amount here
   const currency = currencySelector.value;
   updateBitcoinValue(amount, currency);
 }
