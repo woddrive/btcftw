@@ -223,11 +223,26 @@ currencySelector.addEventListener('change', () => {
 });
 
 // New function to calculate Bitcoin value based on the amount entered manually
+//function calculateBitcoinAmountValue() {
+  //const amount = 1.93; // Enter the desired Bitcoin amount here
+  //const currency = currencySelector.value;
+  //updateBitcoinValue(amount, currency);
+//}
+
+// New function to calculate Bitcoin value based on the amount retrieved from a .txt file
 function calculateBitcoinAmountValue() {
-  const amount = 1.93; // Enter the desired Bitcoin amount here
-  const currency = currencySelector.value;
-  updateBitcoinValue(amount, currency);
+  fetch('bitcoinAmount.txt')
+    .then(response => response.text())
+    .then(data => {
+      const amount = parseFloat(data.trim());
+      const currency = currencySelector.value;
+      updateBitcoinValue(amount, currency);
+    })
+    .catch(error => {
+      console.error('Error fetching Bitcoin amount:', error);
+    });
 }
+
 
 // Call the new function to calculate the Bitcoin value
 calculateBitcoinAmountValue();
