@@ -42,7 +42,8 @@ body {
   }
   
   .mybtc {
-    font-size: 32px;
+    font-size: 36px;
+    font-weight: 700;
   }
   .price {
     font-size: 18px;
